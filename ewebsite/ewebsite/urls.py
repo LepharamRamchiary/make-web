@@ -28,4 +28,7 @@ urlpatterns = [
 
     # transfer routes controller to app get started
     path('get_started/', include('get_started.urls')),
+
+    # tailwind reload product
+    path("__reload__/,", include("django_browser_reload.urls"))
 ]
