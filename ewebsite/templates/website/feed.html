@@ -1,0 +1,88 @@
+{% extends 'layout.html' %} 
+{% load static %} 
+{% block title %} 
+Feedback page
+{%endblock %} 
+{% block content %}
+
+<!-- Feed Section -->
+<section class="features" id="feed">
+  <div class="container">
+    <h2 class="section-title">Latest Updates</h2>
+
+    <div class="feed-container">
+      <!-- Feed Item 1 -->
+      <div class="feed-item">
+        <div class="feed-header">
+          <div class="feed-avatar">JD</div>
+          <div class="feed-author">John Doe</div>
+          <div class="feed-time">2 hours ago</div>
+        </div>
+        <div class="feed-content">
+          <p>
+            Check out our new responsive design! It works perfectly on all
+            devices.
+          </p>
+          <img
+            src="{% static 'images/feed1.jpg' %}"
+            onerror="this.src='https://via.placeholder.com/800x400'"
+            alt="Responsive Design"
+            class="feed-image"
+          />
+        </div>
+        <div class="feed-actions">
+          <a href="#" class="feed-action">👍 Like</a>
+          <a href="#" class="feed-action">💬 Comment</a>
+          <a href="#" class="feed-action">🔄 Share</a>
+        </div>
+      </div>
+
+      <!-- Feed Item 2 -->
+      <div class="feed-item">
+        <div class="feed-header">
+          <div class="feed-avatar">JS</div>
+          <div class="feed-author">Jane Smith</div>
+          <div class="feed-time">5 hours ago</div>
+        </div>
+        <div class="feed-content">
+          <p>
+            We've just launched our mobile app! Download it now from the App
+            Store or Google Play.
+          </p>
+        </div>
+        <div class="feed-actions">
+          <a href="#" class="feed-action">👍 Like</a>
+          <a href="#" class="feed-action">💬 Comment</a>
+          <a href="#" class="feed-action">🔄 Share</a>
+        </div>
+      </div>
+
+      <!-- Feed Item 3 -->
+      <div class="feed-item">
+        <div class="feed-header">
+          <div class="feed-avatar">RJ</div>
+          <div class="feed-author">Robert Johnson</div>
+          <div class="feed-time">1 day ago</div>
+        </div>
+        <div class="feed-content">
+          <p>
+            New tutorial: How to create a responsive website with HTML, CSS, and
+            JavaScript.
+          </p>
+          <img
+            src="{% static 'images/feed2.jpg' %}"
+            onerror="this.src='https://via.placeholder.com/800x400'"
+            alt="Web Design Tutorial"
+            class="feed-image"
+          />
+        </div>
+        <div class="feed-actions">
+          <a href="#" class="feed-action">👍 Like</a>
+          <a href="#" class="feed-action">💬 Comment</a>
+          <a href="#" class="feed-action">🔄 Share</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

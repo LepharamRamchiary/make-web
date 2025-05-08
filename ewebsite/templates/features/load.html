@@ -1,0 +1,139 @@
+{% extends 'layout.html' %} 
+{% load static %} 
+{% block title %}
+Loading Page
+{%endblock %} 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/load.css'%}" />
+{% endblock %} 
+{% block content %}
+<section class="hero">
+  <div class="container">
+    <div class="hero-content fadeIn">
+      <h1 class="hero-title">Lightning Fast Loading</h1>
+      <h2 class="hero-subtitle">
+        Speed is not just a feature, it's a competitive advantage
+      </h2>
+      <div class="feature-icon">⚡</div>
+    </div>
+  </div>
+</section>
+
+<section class="feature-section">
+  <div class="container">
+    <h2 class="section-title">Why Speed Matters</h2>
+
+    <div class="performance-grid">
+      <div class="performance-card fadeIn">
+        <h3>Reduced Bounce Rates</h3>
+        <p>
+          Pages that load in under 2 seconds have an average bounce rate of 9%,
+          while pages that take 5 seconds have a bounce rate of 38%.
+        </p>
+      </div>
+
+      <div class="performance-card fadeIn">
+        <h3>Higher Conversion Rates</h3>
+        <p>
+          For every second delay in mobile page load, conversions can drop by up
+          to 20%. Speed directly impacts your bottom line.
+        </p>
+      </div>
+
+      <div class="performance-card fadeIn">
+        <h3>Better User Experience</h3>
+        <p>
+          Fast-loading websites create a seamless experience that keeps users
+          engaged and encourages them to explore more content.
+        </p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Our Performance Optimization Techniques</h2>
+
+    <div class="stats-container">
+      <div class="stat-box fadeIn">
+        <div class="stat-number">60%</div>
+        <div class="stat-text">Smaller File Sizes</div>
+      </div>
+
+      <div class="stat-box fadeIn">
+        <div class="stat-number">2x</div>
+        <div class="stat-text">Faster Load Times</div>
+      </div>
+
+      <div class="stat-box fadeIn">
+        <div class="stat-number">95%</div>
+        <div class="stat-text">PageSpeed Score</div>
+      </div>
+    </div>
+
+    <div class="performance-grid">
+      <div class="performance-card fadeIn">
+        <h3>Code Optimization</h3>
+        <p>
+          We minimize and compress CSS and JavaScript files, remove unnecessary
+          code, and implement efficient loading strategies.
+        </p>
+        <div class="progress-container">
+          <div class="progress-bar progress-95 animate-progress">95%</div>
+        </div>
+      </div>
+
+      <div class="performance-card fadeIn">
+        <h3>Image Optimization</h3>
+        <p>
+          We compress images, use next-gen formats like WebP, and implement lazy
+          loading for images that aren't immediately visible.
+        </p>
+        <div class="progress-container">
+          <div class="progress-bar progress-90 animate-progress">90%</div>
+        </div>
+      </div>
+
+      <div class="performance-card fadeIn">
+        <h3>Caching Strategy</h3>
+        <p>
+          We implement browser caching and server-side caching to reduce load
+          times for returning visitors and minimize server requests.
+        </p>
+        <div class="progress-container">
+          <div class="progress-bar progress-80 animate-progress">80%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="performance-chart fadeIn">
+      <img
+        src="{% static 'images/chart.png' %}"
+        alt="Performance comparison chart"
+      />
+      <p style="text-align: center; margin-top: 15px; color: #666">
+        Our optimization delivers 2x faster load times than industry average
+      </p>
+    </div>
+
+    <div class="testimonial fadeIn">
+      <p class="testimonial-text">
+        "After optimizing our website with YourBrand's speed techniques, our
+        conversion rate increased by 28%, and our bounce rate dropped
+        dramatically. The ROI on this investment was incredible."
+      </p>
+      <p class="testimonial-author">
+        - Sarah Johnson, Marketing Director at TechCorp
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2 class="cta-title">Ready to supercharge your website's performance?</h2>
+    <p>
+      Our team of optimization experts can help you achieve lightning-fast load
+      times
+    </p>
+    <a href="{% url 'get_started' %}?from=load" class="cta-button">Get Started</a>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,295 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Make your website responsive{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/home.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/feed.css'%}">
+    {% block extra_css %}{% endblock %}
+   
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+              <!-- Background rectangle with rounded corners -->
+              <rect
+                x="10"
+                y="10"
+                width="480"
+                height="180"
+                rx="15"
+                ry="15"
+                fill="#f8f9fa"
+                stroke="#3498db"
+                stroke-width="3"
+              />
+
+              <!-- Browser window frame -->
+              <rect
+                x="70"
+                y="50"
+                width="130"
+                height="100"
+                rx="5"
+                ry="5"
+                fill="#ffffff"
+                stroke="#2c3e50"
+                stroke-width="2"
+              />
+
+              <!-- Browser window top bar -->
+              <rect
+                x="70"
+                y="50"
+                width="130"
+                height="15"
+                rx="5"
+                ry="5"
+                fill="#2c3e50"
+              />
+
+              <!-- Browser dots -->
+              <circle cx="80" cy="57.5" r="3" fill="#e74c3c" />
+              <circle cx="90" cy="57.5" r="3" fill="#f1c40f" />
+              <circle cx="100" cy="57.5" r="3" fill="#2ecc71" />
+
+              <!-- Browser content lines -->
+              <line
+                x1="85"
+                y1="85"
+                x2="185"
+                y2="85"
+                stroke="#ecf0f1"
+                stroke-width="2"
+              />
+              <line
+                x1="85"
+                y1="100"
+                x2="165"
+                y2="100"
+                stroke="#ecf0f1"
+                stroke-width="2"
+              />
+              <line
+                x1="85"
+                y1="115"
+                x2="180"
+                y2="115"
+                stroke="#ecf0f1"
+                stroke-width="2"
+              />
+              <line
+                x1="85"
+                y1="130"
+                x2="160"
+                y2="130"
+                stroke="#ecf0f1"
+                stroke-width="2"
+              />
+
+              <!-- Gear icon representing development -->
+              <g transform="translate(290, 100) scale(0.85)">
+                <circle cx="0" cy="0" r="25" fill="#3498db" />
+                <path
+                  d="M0,-30 L5,-15 L20,-10 L10,0 L20,10 L5,15 L0,30 L-5,15 L-20,10 L-10,0 L-20,-10 L-5,-15 Z"
+                  fill="#2980b9"
+                />
+                <circle cx="0" cy="0" r="10" fill="#f8f9fa" />
+              </g>
+
+              <!-- Text: "Make your website" with bigger font -->
+              <text
+                x="250"
+                y="175"
+                font-family="Arial, sans-serif"
+                font-size="28"
+                font-weight="bold"
+                text-anchor="middle"
+                fill="#2c3e50"
+              >
+                Make your website
+              </text>
+
+              <!-- Abstract code lines coming out of the browser with better curve -->
+              <path
+                d="M200,75 C220,55 240,95 265,75"
+                stroke="#3498db"
+                stroke-width="2.5"
+                fill="none"
+              />
+              <path
+                d="M200,95 C230,75 240,115 265,95"
+                stroke="#3498db"
+                stroke-width="2.5"
+                fill="none"
+              />
+              <path
+                d="M200,115 C225,95 235,135 265,115"
+                stroke="#3498db"
+                stroke-width="2.5"
+                fill="none"
+              />
+            </svg>
+          </div>
+          <button class="nav-toggle" id="navToggle">☰</button>
+          <nav id="mainNav">
+            <ul>
+              <li><a href="{% url 'home'%}#home">Home</a></li>
+              <li><a href="{% url 'home' %}#features">Features</a></li>
+              <li><a href="{% url 'home' %}#about">About</a></li>
+              <li><a href="{% url 'home' %}#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="logo">
+            <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+              <!-- Background rectangle with rounded corners -->
+              <rect
+                x="10"
+                y="10"
+                width="480"
+                height="180"
+                rx="15"
+                ry="15"
+                fill="#f8f9fa"
+                stroke="#3498db"
+                stroke-width="3"
+              />
+
+              <!-- Browser window frame -->
+              <rect
+                x="70"
+                y="50"
+                width="130"
+                height="100"
+                rx="5"
+                ry="5"
+                fill="#ffffff"
+                stroke="#2c3e50"
+                stroke-width="2"
+              />
+
+              <!-- Browser window top bar -->
+              <rect
+                x="70"
+                y="50"
+                width="130"
+                height="15"
+                rx="5"
+                ry="5"
+                fill="#2c3e50"
+              />
+
+              <!-- Browser dots -->
+              <circle cx="80" cy="57.5" r="3" fill="#e74c3c" />
+              <circle cx="90" cy="57.5" r="3" fill="#f1c40f" />
+              <circle cx="100" cy="57.5" r="3" fill="#2ecc71" />
+
+              <!-- Browser content lines -->
+              <line
+                x1="85"
+                y1="85"
+                x2="185"
+                y2="85"
+                stroke="#ecf0f1"
+                stroke-width="2"
+              />
+              <line
+                x1="85"
+                y1="100"
+                x2="165"
+                y2="100"
+                stroke="#ecf0f1"
+                stroke-width="2"
+              />
+              <line
+                x1="85"
+                y1="115"
+                x2="180"
+                y2="115"
+                stroke="#ecf0f1"
+                stroke-width="2"
+              />
+              <line
+                x1="85"
+                y1="130"
+                x2="160"
+                y2="130"
+                stroke="#ecf0f1"
+                stroke-width="2"
+              />
+
+              <!-- Gear icon representing development -->
+              <g transform="translate(290, 100) scale(0.85)">
+                <circle cx="0" cy="0" r="25" fill="#3498db" />
+                <path
+                  d="M0,-30 L5,-15 L20,-10 L10,0 L20,10 L5,15 L0,30 L-5,15 L-20,10 L-10,0 L-20,-10 L-5,-15 Z"
+                  fill="#2980b9"
+                />
+                <circle cx="0" cy="0" r="10" fill="#f8f9fa" />
+              </g>
+
+              <!-- Text: "Make your website" with bigger font -->
+              <text
+                x="250"
+                y="175"
+                font-family="Arial, sans-serif"
+                font-size="28"
+                font-weight="bold"
+                text-anchor="middle"
+                fill="#2c3e50"
+              >
+                Make your website
+              </text>
+
+              <!-- Abstract code lines coming out of the browser with better curve -->
+              <path
+                d="M200,75 C220,55 240,95 265,75"
+                stroke="#3498db"
+                stroke-width="2.5"
+                fill="none"
+              />
+              <path
+                d="M200,95 C230,75 240,115 265,95"
+                stroke="#3498db"
+                stroke-width="2.5"
+                fill="none"
+              />
+              <path
+                d="M200,115 C225,95 235,135 265,115"
+                stroke="#3498db"
+                stroke-width="2.5"
+                fill="none"
+              />
+            </svg>
+          </div>
+          <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+          </div>
+        </div>
+        <div class="copyright">© 2025 Your Company. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <!-- <script src="script.js"></script> -->
+    <script src="{% static 'js/home.js' %}"></script>
+  </body>
+</html>

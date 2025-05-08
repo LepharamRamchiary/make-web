@@ -1,0 +1,213 @@
+{% extends 'layout.html' %} 
+{% load static %} 
+{% block title %}Design Page{%endblock %} 
+{% block extra_css %}
+<link rel="stylesheet" href="{%static 'css/design.css'%}" />
+{% endblock %} 
+{% block content %}
+<section class="hero">
+  <div class="container">
+    <div class="hero-content fadeIn">
+      <h1 class="hero-title">Modern Design</h1>
+      <h2 class="hero-subtitle">
+        Clean, elegant, and visually stunning user interfaces
+      </h2>
+      <div class="feature-icon">🎨</div>
+    </div>
+  </div>
+</section>
+
+<section class="feature-section">
+  <div class="container">
+    <h2 class="section-title">Design Principles We Follow</h2>
+
+    <div class="design-grid">
+      <div class="design-card slideInLeft">
+        <div class="pattern-bg"></div>
+        <h3>Simplicity</h3>
+        <p>
+          We embrace minimalism and remove unnecessary elements to create clean,
+          focused interfaces that guide users intuitively.
+        </p>
+      </div>
+
+      <div class="design-card fadeIn">
+        <div class="pattern-bg"></div>
+        <h3>Consistency</h3>
+        <p>
+          We maintain consistent visual language, interactions, and behavior
+          across your entire website for a cohesive experience.
+        </p>
+      </div>
+
+      <div class="design-card slideInRight">
+        <div class="pattern-bg"></div>
+        <h3>Visual Hierarchy</h3>
+        <p>
+          We carefully organize elements to direct attention to the most
+          important information and guide users through their journey.
+        </p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Our Color Palette</h2>
+
+    <div class="color-palette">
+      <div class="color-swatch primary-color fadeIn">#4A6BFF</div>
+      <div class="color-swatch secondary-color fadeIn">#FF7846</div>
+      <div class="color-swatch dark-color fadeIn">#333333</div>
+      <div class="color-swatch light-color fadeIn">#F4F4F4</div>
+      <div class="color-swatch success-color fadeIn">#28A745</div>
+    </div>
+
+    <p
+      style="
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 40px;
+        color: #666;
+      "
+    >
+      Our carefully selected color palette combines vibrant accent colors with
+      neutral backgrounds to create visually appealing, accessible, and
+      emotionally engaging designs.
+    </p>
+
+    <div class="design-showcase">
+      <div class="showcase-item fadeIn">
+        <img
+          src="{% static 'images/clean.png' %}"
+          alt="Modern UI Design"
+          class="showcase-img"
+        />
+        <div class="showcase-title">Clean User Interface</div>
+      </div>
+
+      <div class="showcase-item fadeIn">
+        <img
+          src="{% static 'images/typo.jfif' %}"
+          alt="Typography Example"
+          class="showcase-img"
+        />
+        <div class="showcase-title">Beautiful Typography</div>
+      </div>
+    </div>
+
+    <div class="design-process">
+      <h2 class="section-title">Our Design Process</h2>
+
+      <div class="process-steps">
+        <div class="process-line"></div>
+
+        <div class="process-step fadeIn">
+          <div class="process-step-number">1</div>
+          <div class="process-step-title">Research</div>
+          <p class="process-step-description">
+            We start by understanding your brand, target audience, and business
+            goals.
+          </p>
+        </div>
+
+        <div class="process-step fadeIn">
+          <div class="process-step-number">2</div>
+          <div class="process-step-title">Wireframing</div>
+          <p class="process-step-description">
+            We create low-fidelity blueprints to establish structure and layout.
+          </p>
+        </div>
+
+        <div class="process-step fadeIn">
+          <div class="process-step-number">3</div>
+          <div class="process-step-title">Visual Design</div>
+          <p class="process-step-description">
+            We develop high-fidelity designs with your brand colors, typography,
+            and imagery.
+          </p>
+        </div>
+
+        <div class="process-step fadeIn">
+          <div class="process-step-number">4</div>
+          <div class="process-step-title">Implementation</div>
+          <p class="process-step-description">
+            We bring the designs to life with clean, efficient code.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="design-principles">
+      <h2 class="section-title">Modern Design Elements</h2>
+
+      <div class="design-grid">
+        <div class="design-card fadeIn">
+          <div class="pattern-bg"></div>
+          <h3>Micro-interactions</h3>
+          <p>
+            Small, subtle animations that provide feedback and delight users as
+            they interact with your website.
+          </p>
+        </div>
+
+        <div class="design-card fadeIn">
+          <div class="pattern-bg"></div>
+          <h3>Negative Space</h3>
+          <p>
+            Strategic use of white space that gives content room to breathe and
+            creates a clean, uncluttered appearance.
+          </p>
+        </div>
+
+        <div class="design-card fadeIn">
+          <div class="pattern-bg"></div>
+          <h3>Bold Typography</h3>
+          <p>
+            Carefully selected fonts with proper hierarchy that enhance
+            readability and convey your brand personality.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="design-showcase">
+      <div class="showcase-item fadeIn">
+        <img
+          src="{% static 'images/mobile.avif' %}"
+          alt="Mobile Design"
+          class="showcase-img"
+        />
+        <div class="showcase-title">Mobile-First Design</div>
+      </div>
+
+      <div class="showcase-item fadeIn">
+        <img
+          src="{% static 'images/light.jfif' %}"
+          alt="Dark Mode"
+          class="showcase-img"
+        />
+        <div class="showcase-title">Light & Dark Modes</div>
+      </div>
+    </div>
+
+    <div class="testimonial fadeIn">
+      <p class="testimonial-text">
+        "The modern design implemented by YourBrand transformed our outdated
+        website into a stunning digital experience. Our customers have
+        consistently praised the new look and feel, and our engagement metrics
+        have increased dramatically."
+      </p>
+      <p class="testimonial-author">- Michael Roberts, CEO of InnoTech</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2 class="cta-title">Ready for a design transformation?</h2>
+    <p>
+      Let's create a visually stunning website that reflects your brand and
+      engages your audience
+    </p>
+    <a href="{% url 'get_started' %}?from=design" class="cta-button">Get Started</a>
+  </div>
+</section>
+{% endblock %}
