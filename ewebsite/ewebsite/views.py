@@ -5,8 +5,6 @@ def home(request):
     # return HttpResponse("Hello, world, Home")
     return render(request, 'website/home.html')
 
-def feed(request):
-    return render(request, 'website/feed.html')
 
 def responsive(request):
     return render(request, 'features/responsive.html')

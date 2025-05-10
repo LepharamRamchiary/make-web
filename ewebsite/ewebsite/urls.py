@@ -18,10 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 
+# for image config
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('feed/', views.feed, name='feed'),
     path('responsive/', views.responsive, name='responsive'),
     path('load/', views.load, name='load'),
     path('design/', views.design, name='design'),
@@ -31,4 +34,4 @@ urlpatterns = [
 
     # tailwind reload product
     path("__reload__/,", include("django_browser_reload.urls"))
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

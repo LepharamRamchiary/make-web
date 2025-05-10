@@ -9,7 +9,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
-    --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --text-5xl: 3rem;
@@ -228,9 +227,6 @@
   }
   .rounded {
     border-radius: 0.25rem;
-  }
-  .bg-blue-500 {
-    background-color: var(--color-blue-500);
   }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
