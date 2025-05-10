@@ -1,0 +1,46 @@
+{% extends 'layout.html' %} 
+{% load static %} 
+{% block title %} 
+Feedback page
+{% endblock %} 
+{% block content %}
+
+<!-- Feed Section -->
+<section class="features" id="feed">
+  <div class="container">
+    <h2 class="section-title">Latest Updates</h2>
+
+    <div class="feed-container">
+      {% for feed in feeds %}
+        <div class="feed-item">
+          <div class="feed-header">
+            <div class="feed-avatar">{{ feed.name|slice:":2" }}</div>
+            <div class="feed-author">{{ feed.name }}</div>
+            <div class="feed-time">{{ feed.created_at|timesince }} ago</div>
+          </div>
+          <div class="feed-content">
+            <p>{{ feed.description }}</p>
+            {% if feed.image %}
+              <img
+                src="{{ feed.image.url }}"
+                onerror="this.src='https://via.placeholder.com/800x400'"
+                alt="{{ feed.name }}"
+                class="feed-image"
+              />
+            {% endif %}
+          </div>
+          <div class="feed-actions">
+            <a href="#" class="feed-action">👍 Like ({{ feed.like_count }})</a>
+            <a href="#" class="feed-action">💬 Comment ({{ feed.comment_count }})</a>
+            <a href="#" class="feed-action">🔄 Share ({{ feed.share_count }})</a>
+          </div>
+        </div>
+      {% empty %}
+        <div class="feed-item">
+          <p>No updates available at the moment.</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

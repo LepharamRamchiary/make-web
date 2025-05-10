@@ -1,0 +1,107 @@
+{% extends 'layout.html' %} 
+{% load static %} 
+{% block title %}Responsive page{%endblock %} 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/responsive.css'%}">
+{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="container">
+    <div class="hero-content fadeIn">
+      <h1 class="hero-title">Fully Responsive Design</h1>
+      <h2 class="hero-subtitle">
+        Create beautiful experiences across all devices and screen sizes
+      </h2>
+      <div class="feature-icon">📱</div>
+    </div>
+  </div>
+</section>
+
+<section class="feature-section">
+  <div class="container">
+    <h2 class="section-title">Why Responsive Design Matters</h2>
+
+    <div class="responsive-grid">
+      <div class="responsive-card fadeIn">
+        <h3>Mobile-First Approach</h3>
+        <p>
+          Our websites are designed with a mobile-first approach, ensuring they
+          work flawlessly on smartphones before scaling up to larger screens.
+        </p>
+      </div>
+
+      <div class="responsive-card fadeIn">
+        <h3>Fluid Layouts</h3>
+        <p>
+          We use fluid grids and layouts that adjust to the size of the
+          viewport, ensuring content looks great at any screen resolution.
+        </p>
+      </div>
+
+      <div class="responsive-card fadeIn">
+        <h3>Flexible Images</h3>
+        <p>
+          All images are optimized to scale correctly and load quickly on any
+          device, maintaining visual appeal without compromising performance.
+        </p>
+      </div>
+    </div>
+
+    <div class="device-mockup fadeIn">
+      <img
+        src="{% static 'images/responsive1.jpg' %}"
+        alt="Responsive design showcase"
+      />
+      <p style="text-align: center; margin-top: 15px; color: #666">
+        Our websites adapt seamlessly across devices
+      </p>
+    </div>
+
+    <h2 class="section-title">Key Benefits</h2>
+
+    <div class="responsive-grid">
+      <div class="responsive-card fadeIn">
+        <h3>Improved User Experience</h3>
+        <p>
+          Users can access your site from any device and still enjoy a seamless,
+          intuitive experience tailored to their screen size.
+        </p>
+      </div>
+
+      <div class="responsive-card fadeIn">
+        <h3>Better SEO Rankings</h3>
+        <p>
+          Google prioritizes mobile-friendly websites in search results, giving
+          your responsive site a competitive edge.
+        </p>
+      </div>
+
+      <div class="responsive-card fadeIn">
+        <h3>Cost Efficiency</h3>
+        <p>
+          Maintain one website instead of separate desktop and mobile versions,
+          saving development and maintenance costs.
+        </p>
+      </div>
+    </div>
+
+    <div class="device-mockup fadeIn">
+      <img
+        src="{% static 'images/responsive2.jfif' %}"
+        alt="Responsive design statistics"
+      />
+      <p style="text-align: center; margin-top: 15px; color: #666">
+        Over 60% of web traffic comes from mobile devices
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2 class="cta-title">Ready to make your website fully responsive?</h2>
+    <p>Contact our team today to discuss your project requirements</p>
+    <a  href="{% url 'get_started' %}?from=responsive" class="cta-button">Get Started</a>
+  </div>
+</section>
+{% endblock %}
