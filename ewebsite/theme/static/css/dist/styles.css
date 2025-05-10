@@ -213,6 +213,9 @@
   .grid {
     display: grid;
   }
+  .table {
+    display: table;
+  }
   .h-screen {
     height: 100vh;
   }
