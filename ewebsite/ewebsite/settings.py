@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-&%odp74d39*$trwri-#w=ao3+!5z-kkybpl6)7)6)0$06-s2vp
 DEBUG = False
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://make-web-1.onrender.com/']
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
